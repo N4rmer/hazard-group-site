@@ -3,20 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hazard Group — Risk &amp; Resiliency Consultancy</title>
-<meta name="description" content="Hazard Group helps organizations prepare for, respond to, and recover from crises with practical, scalable frameworks built for local realities and global consistency.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚠️</text></svg>">
+<title>Hazard Group, Strategic Risk Management</title>
+<meta name="description" content="Hazard Group prepares, responds to, and recovers from crises on behalf of private enterprise, public institutions, NGOs, and individuals who require absolute discretion.">
+<link rel="canonical" href="https://hazardgroup.org/">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hazard Group">
+<meta property="og:title" content="Hazard Group, Strategic Risk Management">
+<meta property="og:description" content="Hazard Group prepares, responds to, and recovers from crises on behalf of private enterprise, public institutions, NGOs, and individuals who require absolute discretion.">
+<meta property="og:url" content="https://hazardgroup.org/">
+<meta property="og:image" content="https://hazardgroup.org/favicon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hazard Group, Strategic Risk Management">
+<meta name="twitter:description" content="Hazard Group prepares, responds to, and recovers from crises on behalf of private enterprise, public institutions, NGOs, and individuals who require absolute discretion.">
+<meta name="twitter:image" content="https://hazardgroup.org/favicon-512.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hazard Group",
+  "url": "https://hazardgroup.org/",
+  "logo": "https://hazardgroup.org/favicon-512.png",
+  "description": "Hazard Group prepares, responds to, and recovers from crises on behalf of private enterprise, public institutions, NGOs, and individuals who require absolute discretion.",
+  "email": "contact@hazardgroup.org"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0b0e11;
-    --bg-soft: #12171c;
-    --bg-card: #171d23;
-    --paper: #f3f1ea;
-    --paper-dim: #b9c0c6;
-    --amber: #e6a428;
+    --bg: #0a0d10;
+    --bg-soft: #101418;
+    --paper: #f2efe6;
+    --paper-dim: #9aa1a8;
+    --paper-faint: #62686e;
+    --amber: #dc9a2e;
     --amber-dim: #b8811c;
-    --line: rgba(255,255,255,0.12);
-    --max: 1080px;
+    --line: rgba(242,239,230,0.09);
+    --line-strong: rgba(242,239,230,0.16);
+    --max: 1120px;
+    --serif: 'Newsreader', Georgia, serif;
+    --sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -24,146 +58,227 @@
     margin: 0;
     background: var(--bg);
     color: var(--paper);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.55;
+    font-family: var(--sans);
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    position: relative;
   }
   a { color: inherit; }
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
 
-  /* Hazard stripe accent */
-  .stripe {
-    height: 6px;
-    background: repeating-linear-gradient(
-      -45deg,
-      var(--bg) 0 14px,
-      var(--amber) 14px 28px
-    );
+  /* film-grain texture, applied globally, very subtle */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 999; pointer-events: none;
+    opacity: 0.05; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
   header {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(11,14,17,0.85);
-    backdrop-filter: blur(6px);
+    background: rgba(10,13,16,0.82);
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line);
   }
   nav.wrap {
     display: flex; align-items: center; justify-content: space-between;
-    padding-top: 18px; padding-bottom: 18px;
+    padding-top: 22px; padding-bottom: 22px;
   }
   .brand {
     display: inline-flex; align-items: baseline; gap: 6px;
-    font-weight: 800; font-size: 1.25rem; letter-spacing: 0.04em;
+    font-weight: 700; font-size: 1.05rem; letter-spacing: 0.06em;
     text-decoration: none; color: var(--paper); text-transform: uppercase;
+    font-family: var(--sans);
   }
-  .brand .hz { color: var(--paper); }
   .brand .gr { color: var(--amber); }
-  nav ul { list-style: none; display: flex; gap: 32px; margin: 0; padding: 0; }
+  nav ul { list-style: none; display: flex; gap: 40px; margin: 0; padding: 0; }
   nav ul a {
-    text-decoration: none; font-size: 0.92rem; font-weight: 500;
-    color: var(--paper-dim); border-bottom: 2px solid transparent;
-    padding-bottom: 4px; transition: border-color 0.2s;
+    text-decoration: none; font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--paper-dim); position: relative; padding-bottom: 3px;
   }
-  nav ul a:hover { border-color: var(--amber); }
+  nav ul a::after {
+    content: ''; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px;
+    background: var(--amber); transition: right 0.25s ease;
+  }
+  nav ul a:hover { color: var(--paper); }
+  nav ul a:hover::after { right: 0; }
   .nav-links { display: flex; }
   .menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--paper); }
 
-  section { padding: 96px 0; }
-  section#services, section#contact { padding-top: 88px; }
+  section { padding: 140px 0; position: relative; }
 
   .eyebrow {
-    text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem;
-    font-weight: 700; color: var(--amber); margin: 0 0 14px;
+    text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem;
+    font-weight: 600; color: var(--amber); margin: 0 0 22px;
+    font-family: var(--sans);
   }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--paper); }
   h1 {
-    font-size: clamp(2.2rem, 5vw, 3.4rem);
-    line-height: 1.08; margin: 0 0 24px; font-weight: 800; max-width: 16ch;
-    color: var(--paper);
+    font-size: clamp(2.6rem, 5.6vw, 4.4rem);
+    line-height: 1.06; margin: 0 0 28px; max-width: 17ch; letter-spacing: -0.01em;
   }
+  h1 em { font-style: italic; color: var(--amber); font-weight: 500; }
   h2 {
-    font-size: clamp(1.6rem, 3vw, 2.1rem);
-    margin: 0 0 20px; font-weight: 800; color: var(--paper);
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    margin: 0 0 24px;
   }
   .lede {
-    font-size: 1.15rem; color: var(--paper-dim); max-width: 62ch; margin: 0 0 36px;
+    font-size: 1.18rem; color: var(--paper-dim); max-width: 56ch; margin: 0 0 40px;
+    font-weight: 400;
   }
 
-  #hero { padding-top: 110px; padding-bottom: 90px; }
-  .hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; }
-  .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn {
-    display: inline-block; padding: 14px 28px; border-radius: 2px;
-    font-weight: 700; font-size: 0.95rem; text-decoration: none;
-    border: 2px solid var(--amber); transition: all 0.15s;
-  }
-  .btn-primary { background: var(--amber); color: var(--bg); }
-  .btn-primary:hover { background: var(--amber-dim); border-color: var(--amber-dim); }
-  .btn-ghost { background: transparent; color: var(--paper); border-color: var(--line); }
-  .btn-ghost:hover { background: var(--paper); color: var(--bg); border-color: var(--paper); }
+  /* ---------- reveal on scroll ---------- */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
 
-  .hero-card {
-    background: var(--bg-card); color: var(--paper); padding: 32px;
-    border-left: 6px solid var(--amber); border-radius: 2px;
+  /* ---------- hero ---------- */
+  #hero { padding-top: 150px; padding-bottom: 100px; overflow: hidden; }
+  #hero::before {
+    content: '';
+    position: absolute; top: -260px; right: -160px; width: 680px; height: 680px;
+    background: radial-gradient(circle, rgba(220,154,46,0.16), transparent 68%);
+    filter: blur(10px);
+    pointer-events: none;
   }
-  .hero-card h3 { margin: 0 0 14px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--amber); }
-  .hero-card ul { margin: 0; padding-left: 18px; }
-  .hero-card li { margin-bottom: 10px; font-size: 0.95rem; color: var(--paper-dim); }
+  .hero-inner { position: relative; max-width: 46ch; }
+  .cta-row { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block; padding: 15px 30px;
+    font-family: var(--sans); font-weight: 600; font-size: 0.92rem; text-decoration: none;
+    background: var(--amber); color: #1a1305; border-radius: 2px;
+    transition: background 0.2s ease;
+  }
+  .btn-primary:hover { background: #e8ab4b; }
+  .text-link {
+    font-family: var(--sans); font-weight: 600; font-size: 0.92rem; text-decoration: none;
+    color: var(--paper); border-bottom: 1px solid var(--line-strong); padding-bottom: 3px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .text-link:hover { border-color: var(--amber); color: var(--amber); }
 
-  #about { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-  .stat-list { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .stat { border-left: 3px solid var(--amber); padding-left: 16px; }
-  .stat b { display: block; font-size: 1.6rem; font-weight: 800; color: var(--paper); }
-  .stat span { font-size: 0.88rem; color: var(--paper-dim); }
+  .stat-strip {
+    margin-top: 100px; display: flex; flex-wrap: wrap;
+    border-top: 1px solid var(--line);
+  }
+  .stat-strip .stat {
+    flex: 1 1 180px; padding: 28px 32px 0 0; margin-right: 32px;
+    border-left: 1px solid var(--line); padding-left: 24px; margin-top: -1px;
+    padding-top: 29px;
+  }
+  .stat-strip .stat:first-child { border-left: none; padding-left: 0; }
+  .stat b { display: block; font-family: var(--serif); font-size: 1.9rem; font-weight: 500; color: var(--paper); }
+  .stat span { font-size: 0.82rem; color: var(--paper-faint); line-height: 1.4; display: block; margin-top: 6px; }
 
-  .services-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 44px;
+  /* ---------- about ---------- */
+  #about { background: var(--bg-soft); }
+  .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px; align-items: start; }
+  .about-statement {
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: clamp(1.7rem, 2.8vw, 2.3rem); line-height: 1.32; color: var(--paper);
   }
-  .service-card {
-    background: var(--bg-card); border: 1px solid var(--line); padding: 30px;
-    position: relative; overflow: hidden;
-  }
-  .service-card::before {
-    content: attr(data-num);
-    position: absolute; top: -8px; right: 12px; font-size: 4.5rem;
-    font-weight: 800; color: rgba(255,255,255,0.05); z-index: 0;
-  }
-  .service-card h3 { position: relative; margin: 0 0 12px; font-size: 1.15rem; font-weight: 800; color: var(--paper); }
-  .service-card ul { position: relative; margin: 0; padding-left: 18px; color: var(--paper-dim); font-size: 0.95rem; }
-  .service-card li { margin-bottom: 8px; }
+  #about .body-text { font-size: 1.05rem; color: var(--paper-dim); max-width: 52ch; }
+  #about .body-text p { margin: 0 0 20px; }
+  #about .body-text p:last-child { margin-bottom: 0; }
 
+  /* ---------- clients: dossier visual ---------- */
+  #clients .body-copy { font-size: 1.02rem; color: var(--paper-dim); max-width: 52ch; margin: 0 0 18px; }
+  #clients .body-copy:last-child { margin-bottom: 0; }
+  .clientele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+
+  .dossier {
+    background: #ece7da;
+    color: #211f1a;
+    padding: 44px 40px;
+    position: relative;
+    transform: rotate(-0.6deg);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .dossier-stamp {
+    position: absolute; top: 26px; right: 34px;
+    font-family: var(--sans); font-weight: 700; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.16em; color: #a23b32;
+    border: 2px solid #a23b32; border-radius: 3px;
+    padding: 4px 10px; transform: rotate(7deg); opacity: 0.8;
+  }
+  .dossier-row { margin-bottom: 26px; }
+  .dossier-row:last-child { margin-bottom: 0; }
+  .dossier-label {
+    font-family: var(--sans); font-size: 0.68rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; color: #7a7365;
+    margin-bottom: 10px;
+  }
+  .redact { height: 13px; background: #201e19; border-radius: 1px; margin-bottom: 7px; }
+  .redact:last-child { margin-bottom: 0; }
+
+  /* ---------- services: editorial numbered list ---------- */
+  .service-row {
+    display: grid; grid-template-columns: 110px 1fr; gap: 40px;
+    padding: 44px 0; border-top: 1px solid var(--line);
+    transition: padding-left 0.3s ease;
+  }
+  .services-list .service-row:last-child { border-bottom: 1px solid var(--line); }
+  .service-row:hover { padding-left: 12px; }
+  .service-num {
+    font-family: var(--serif); font-weight: 400; font-size: 2.6rem;
+    color: transparent; -webkit-text-stroke: 1px var(--line-strong);
+    line-height: 1;
+  }
+  .service-row:hover .service-num { -webkit-text-stroke: 1px var(--amber); }
+  .service-row h3 { font-size: 1.35rem; margin: 0 0 10px; font-weight: 500; }
+  .service-row ul { margin: 0; padding-left: 20px; color: var(--paper-dim); font-size: 0.98rem; }
+  .service-row li { margin-bottom: 10px; }
+  .service-row li:last-child { margin-bottom: 0; }
+  .phase {
+    display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--amber);
+    margin-right: 8px; vertical-align: 2px;
+  }
+
+  /* ---------- why: spec-sheet list ---------- */
   #why { background: var(--bg-soft); }
-  #why .eyebrow { color: var(--amber); }
-  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); margin-top: 44px; }
-  .why-card { background: var(--bg-soft); padding: 30px; }
-  .why-card h3 { margin: 0 0 10px; font-size: 1.05rem; color: var(--amber); font-weight: 700; }
-  .why-card p { margin: 0; color: var(--paper-dim); font-size: 0.95rem; }
+  .why-row {
+    display: grid; grid-template-columns: 1fr 2fr; gap: 40px;
+    padding: 36px 0; border-top: 1px solid var(--line);
+  }
+  .why-list .why-row:last-child { border-bottom: 1px solid var(--line); }
+  .why-row h3 {
+    font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(--amber);
+    text-transform: uppercase; letter-spacing: 0.08em; margin: 0; align-self: start;
+  }
+  .why-row p { margin: 0; color: var(--paper-dim); font-size: 1.02rem; max-width: 58ch; }
 
+  /* ---------- contact ---------- */
   #contact { text-align: center; }
+  #contact .wrap { max-width: 720px; }
   #contact .lede { margin-left: auto; margin-right: auto; }
-  .contact-box {
-    background: var(--bg-card); border: 1px solid var(--line); padding: 48px;
-    max-width: 640px; margin: 0 auto;
+  .email-link {
+    display: inline-block; font-family: var(--serif); font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+    font-weight: 500; color: var(--paper); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong); padding-bottom: 6px;
+    transition: color 0.2s ease, border-color 0.2s ease;
   }
-  .contact-box a.email {
-    display: inline-block; font-size: 1.3rem; font-weight: 800; color: var(--paper);
-    margin: 8px 0 24px; text-decoration: none; border-bottom: 3px solid var(--amber);
-  }
-  .domains { font-size: 0.85rem; color: var(--paper-dim); margin-top: 8px; }
+  .email-link:hover { color: var(--amber); border-color: var(--amber); }
+  .domains { font-size: 0.82rem; color: var(--paper-faint); margin-top: 26px; letter-spacing: 0.02em; }
 
   footer {
-    border-top: 1px solid var(--line); padding: 28px 0; font-size: 0.85rem;
-    color: var(--paper-dim); text-align: center;
+    border-top: 1px solid var(--line); padding: 32px 0; font-size: 0.8rem;
+    color: var(--paper-faint); text-align: center;
   }
 
   @media (max-width: 860px) {
-    .hero-grid, .about-grid { grid-template-columns: 1fr; }
-    .services-grid, .why-grid { grid-template-columns: 1fr; }
-    .stat-list { grid-template-columns: 1fr 1fr; }
+    section { padding: 88px 0; }
+    .about-grid, .clientele-grid { grid-template-columns: 1fr; gap: 32px; }
+    .dossier { transform: none; }
+    .service-row, .why-row { grid-template-columns: 1fr; gap: 14px; }
+    .service-num { font-size: 1.8rem; }
+    .stat-strip { flex-direction: column; }
+    .stat-strip .stat { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 20px; }
+    .stat-strip .stat:first-child { border-top: none; margin-top: 0; padding-top: 0; }
     nav ul.nav-links {
       position: absolute; top: 100%; left: 0; right: 0; background: var(--bg);
-      flex-direction: column; padding: 16px 32px; border-bottom: 1px solid var(--line);
-      display: none;
+      flex-direction: column; padding: 20px 40px; border-bottom: 1px solid var(--line);
+      display: none; gap: 20px;
     }
     nav ul.nav-links.open { display: flex; }
     .menu-btn { display: block; }
@@ -172,12 +287,12 @@
 </head>
 <body>
 
-<div class="stripe"></div>
 <header>
   <nav class="wrap">
-    <a class="brand" href="#hero"><span class="hz">HAZARD</span><span class="gr">GROUP</span></a>
+    <a class="brand" href="#hero">HAZARD<span class="gr">GROUP</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
+      <li><a href="#clients">Clients</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -187,87 +302,139 @@
 </header>
 
 <section id="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Risk &amp; Resiliency Consultancy</p>
-      <h1>Crisis-ready organizations aren't built during the crisis.</h1>
-      <p class="lede">
-        Hazard Group helps organizations prepare for, respond to, and recover from crises by
-        building simple, practical, and scalable frameworks tailored to local realities.
-        We design crisis management programs from scratch, advise senior leadership during
-        high-severity events, and bridge the gaps between technology, cyber, and physical
-        security teams.
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow reveal">Strategic Risk Management</p>
+      <h1 class="reveal">Crisis management, before, during, and after it happens.</h1>
+      <p class="lede reveal">
+        Hazard Group prepares clients for high-severity events, manages the response while
+        they're unfolding, and leads recovery once they're over. We work with private
+        companies, public institutions, NGOs, and individuals who require complete discretion,
+        advising principals directly and covering cyber, technology, and physical security in
+        one integrated response.
       </p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Start a conversation</a>
-        <a class="btn btn-ghost" href="#services">View services</a>
+      <div class="cta-row reveal">
+        <a class="btn-primary" href="#contact">Start a conversation</a>
+        <a class="text-link" href="#services">View services &rarr;</a>
       </div>
     </div>
-    <div class="hero-card">
-      <h3>What sets our approach apart</h3>
-      <ul>
-        <li>Programs built from the ground up, not off-the-shelf templates.</li>
-        <li>Direct advisory to senior leadership when it matters most.</li>
-        <li>Integrated response across cyber, technology, and physical security.</li>
-        <li>Global consistency, adapted to local realities.</li>
-      </ul>
+    <div class="stat-strip reveal">
+      <div class="stat"><b>360&deg;</b><span>Cyber, technology &amp; physical security</span></div>
+      <div class="stat"><b>100+</b><span>Countries factored into risk planning</span></div>
+      <div class="stat"><b>0&rarr;1</b><span>Crisis programs built from scratch</span></div>
+      <div class="stat"><b>24/7</b><span>Senior-leadership crisis advisory</span></div>
     </div>
   </div>
 </section>
 
 <section id="about">
   <div class="wrap about-grid">
-    <div>
+    <div class="reveal">
       <p class="eyebrow">About Hazard Group</p>
-      <h2>Global consistency. Local reality.</h2>
-      <p class="lede" style="margin-bottom:0;">
-        Every organization's risk landscape is different — but the discipline required to
+      <p class="about-statement">Global consistency. Local reality.</p>
+    </div>
+    <div class="body-text reveal">
+      <p>
+        Every client's risk landscape is different, but the discipline required to
         navigate it isn't. Hazard Group translates enterprise-grade crisis management practice
         into frameworks that are simple enough to actually be used under pressure, and
-        scalable enough to hold up as the organization grows.
+        scalable enough to hold up when the stakes get higher.
       </p>
     </div>
-    <div class="stat-list">
-      <div class="stat"><b>360°</b><span>Cyber, technology &amp; physical security</span></div>
-      <div class="stat"><b>100+</b><span>Countries factored into risk planning</span></div>
-      <div class="stat"><b>0→1</b><span>Crisis programs built from scratch</span></div>
-      <div class="stat"><b>24/7</b><span>Senior-leadership crisis advisory</span></div>
+  </div>
+</section>
+
+<section id="clients">
+  <div class="wrap clientele-grid">
+    <div class="reveal">
+      <p class="eyebrow">Our Clients</p>
+      <h2>We don't name names.</h2>
+      <p class="lede">
+        Hazard Group's client base spans sectors and borders. Discretion is non-negotiable
+        across all of them.
+      </p>
+      <p class="body-copy">
+        Our engagements include private enterprise, public and multilateral institutions,
+        humanitarian organizations operating in hostile environments, and individual principals
+        and family offices whose exposure is personal rather than corporate.
+      </p>
+      <p class="body-copy">
+        None of them appear here. Client identities, engagement details, and the nature of any
+        incident are protected as standard practice, not an exception. If you've heard of us,
+        it wasn't from us.
+      </p>
+    </div>
+    <div class="dossier reveal">
+      <div class="dossier-stamp">Confidential</div>
+      <div class="dossier-row">
+        <div class="dossier-label">Private Sector</div>
+        <div class="redact" style="width:78%"></div>
+        <div class="redact" style="width:52%"></div>
+      </div>
+      <div class="dossier-row">
+        <div class="dossier-label">Public &amp; Multilateral</div>
+        <div class="redact" style="width:64%"></div>
+      </div>
+      <div class="dossier-row">
+        <div class="dossier-label">NGO &amp; Humanitarian</div>
+        <div class="redact" style="width:84%"></div>
+        <div class="redact" style="width:34%"></div>
+      </div>
+      <div class="dossier-row">
+        <div class="dossier-label">Principals &amp; Family Offices</div>
+        <div class="redact" style="width:58%"></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="services">
   <div class="wrap">
-    <p class="eyebrow">Core Services</p>
-    <h2>What we do</h2>
-    <p class="lede">Four disciplines, one integrated approach to organizational resilience.</p>
-    <div class="services-grid">
-      <div class="service-card" data-num="01">
-        <h3>Executive Crisis Advisory</h3>
-        <ul>
-          <li>Direct support to senior leadership during high-severity events.</li>
-        </ul>
+    <p class="eyebrow reveal">Core Services</p>
+    <h2 class="reveal">What we do</h2>
+    <p class="lede reveal">Four disciplines, one integrated approach to operational resilience.</p>
+
+    <div class="services-list">
+      <div class="service-row reveal">
+        <div class="service-num">01</div>
+        <div>
+          <h3>Executive Crisis Advisory</h3>
+          <ul>
+            <li><span class="phase">Before</span>Confidential counsel the moment a threat surfaces, a hostile approach, a personal security risk, a leaked document, while it's still a rumor and not yet a headline.</li>
+            <li><span class="phase">During</span>Embedded beside the principal or the boardroom for the duration of the event, shaping every decision in real time, while the room is still deciding what to say.</li>
+            <li><span class="phase">After</span>Containing the fallout once the immediate danger passes: reputation, continuity, and the quiet work of making sure it doesn't happen the same way twice.</li>
+          </ul>
+        </div>
       </div>
-      <div class="service-card" data-num="02">
-        <h3>Crisis Management Framework Development</h3>
-        <ul>
-          <li>End-to-end design of governance structures, SOPs, escalation protocols, and accountability processes.</li>
-          <li>Adapted to local laws, cultures, and risk environments while ensuring global consistency.</li>
-        </ul>
+      <div class="service-row reveal">
+        <div class="service-num">02</div>
+        <div>
+          <h3>Crisis Management Framework Development</h3>
+          <ul>
+            <li>Full governance architecture, SOPs, and escalation protocols built long before the alarm sounds, so no one is improvising when it counts.</li>
+            <li>Localized to the laws, culture, and threat landscape of every market you operate in, without losing a single line of global consistency.</li>
+          </ul>
+        </div>
       </div>
-      <div class="service-card" data-num="03">
-        <h3>Crisis Simulations &amp; Exercises</h3>
-        <ul>
-          <li>Development and facilitation of tabletop exercises and full-scale drills.</li>
-          <li>Train-the-Trainer programs so organizations can independently design and run their own simulations.</li>
-        </ul>
+      <div class="service-row reveal">
+        <div class="service-num">03</div>
+        <div>
+          <h3>Crisis Simulations &amp; Exercises</h3>
+          <ul>
+            <li>Full-scale drills and tabletop exercises engineered to expose the gap between what your protocol says and what your people actually do when it's live.</li>
+            <li>Train-the-Trainer programs that leave your own team fully capable of running the next simulation without us in the room.</li>
+          </ul>
+        </div>
       </div>
-      <div class="service-card" data-num="04">
-        <h3>Strategic Risk Management</h3>
-        <ul>
-          <li>Geopolitical and operational risk advisory.</li>
-          <li>Contingency planning for high-risk, high-uncertainty regions.</li>
-        </ul>
+      <div class="service-row reveal">
+        <div class="service-num">04</div>
+        <div>
+          <h3>Strategic Risk Management</h3>
+          <ul>
+            <li>Geopolitical and operational risk advisory for the environments most firms' risk matrices simply mark "avoid."</li>
+            <li>Contingency plans built for the exact moment a low-probability scenario stops being low-probability.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -275,22 +442,23 @@
 
 <section id="why">
   <div class="wrap">
-    <p class="eyebrow">Differentiators</p>
-    <h2>Why Hazard Group</h2>
-    <div class="why-grid">
-      <div class="why-card">
+    <p class="eyebrow reveal">Differentiators</p>
+    <h2 class="reveal">Why Hazard Group</h2>
+
+    <div class="why-list">
+      <div class="why-row reveal">
         <h3>Proven Senior Advisory</h3>
         <p>A trusted advisor to senior leadership during high-severity events, with a track record of building crisis programs from the ground up and managing live incidents under pressure.</p>
       </div>
-      <div class="why-card">
+      <div class="why-row reveal">
         <h3>Integrated Security Approach</h3>
         <p>Expertise in uniting cyber, technology, and physical security functions under a single crisis framework.</p>
       </div>
-      <div class="why-card">
-        <h3>Cross-Sector Experience</h3>
-        <p>Experience spanning public sector, financial services, and technology — translating best practices across industries rather than applying a one-size-fits-all playbook.</p>
+      <div class="why-row reveal">
+        <h3>Sector-Agnostic by Design</h3>
+        <p>No industry is out of scope. We operate across government, international and multilateral organizations, and the private sector alike, applying the same discipline wherever the risk lives.</p>
       </div>
-      <div class="why-card">
+      <div class="why-row reveal">
         <h3>Global Perspective</h3>
         <p>Operated across 100+ countries, balancing global consistency with locally nuanced solutions.</p>
       </div>
@@ -300,13 +468,11 @@
 
 <section id="contact">
   <div class="wrap">
-    <p class="eyebrow">Get In Touch</p>
-    <h2>Let's talk about your risk exposure</h2>
-    <p class="lede">Whether you need an outside advisor for a live event or a resilience framework built from the ground up, start with a conversation.</p>
-    <div class="contact-box">
-      <a class="email" href="mailto:contact@hazardgroup.org">contact@hazardgroup.org</a>
-      <p class="domains">hazardgroup.org &middot; hazagroup.co</p>
-    </div>
+    <p class="eyebrow reveal">Get In Touch</p>
+    <h2 class="reveal">Let's talk about your risk exposure</h2>
+    <p class="lede reveal">Whether you need an outside advisor for a live event or a resilience framework built from the ground up, start with a conversation.</p>
+    <a class="email-link reveal" href="mailto:contact@hazardgroup.org">contact@hazardgroup.org</a>
+    <p class="domains reveal">hazardgroup.org &middot; hazagroup.co</p>
   </div>
 </section>
 
@@ -320,6 +486,11 @@
   const navLinks = document.getElementById('navLinks');
   menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
 </body>
